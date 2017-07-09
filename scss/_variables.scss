@@ -1,0 +1,34 @@
+$columns: 12;
+$base-width: 100%/$columns;
+
+$tinyFontSize: 12px;
+$smallFontSize: 15px;
+$normalFontSize: 18px;
+$bigFontSize: 22px;
+$defaultFontColor: white;
+$detailsColor: #23bda1;
+$circleColor: #fdfdfd;
+$greyColor: #eeeeee;
+$darkGrey: #e3e3e3;
+$greyFontColor: #5e5e5e;
+
+$headerBackgroundColor: black;
+$productBackgroundColor: #f1f1f1;
+$ticketBorder: grey;
+$ticketBackgroundColor: #f6f6f6;
+
+$arrow-rotations: (
+    right: -45deg,
+    left: 135deg
+);
+
+$button-sizes: (
+    big: (300px, 2.5em, $normalFontSize),
+    medium: (200px, 2.5em, $normalFontSize),
+    small: (150px, 2em, $smallFontSize)
+);
+
+$tickets: (
+    light: ($ticketBorder, $ticketBackgroundColor, $greyFontColor, $detailsColor, $greyFontColor, $greyFontColor),
+    blue: ($detailsColor, $detailsColor, $greyFontColor, $defaultFontColor, $defaultFontColor, $detailsColor)
+);

@@ -1,0 +1,20 @@
+.copyRight {
+    width: 100%;
+    font-size: $tinyFontSize;
+    height: 3em;
+    display: flex;
+    align-items: flex-end;
+
+    p {
+        opacity: 0.5;
+    }
+
+    .socialMedia {
+        display: inline-flex;
+
+        img {
+            width: 40%;
+            height: auto;
+        }
+    }
+}

@@ -1,0 +1,127 @@
+@import 'variables';
+
+.price-list {
+    margin-top: 10px;
+
+    p {
+        font-size: $bigFontSize;
+        color: $greyFontColor;
+    }
+}
+
+.price-list-header {
+    border: 1px solid $detailsColor;
+    background-color: $detailsColor;
+    width: 95%;
+    height: 5px;
+    margin-bottom: 40px;
+}
+
+@each $type, $properties in $tickets {
+    $border: nth($properties, 1);
+    $background: nth($properties, 2);
+    $fontColor: nth($properties, 3);
+    $strongFontColor: nth($properties, 4);
+    $innerCircleColor: nth($properties, 5);
+    $circleBorderColor: nth($properties, 6);
+
+    .ticket-#{$type} {
+        border: 1px solid $border;
+        width: 95%;
+        background-color: $background;
+
+        p{
+            color: $fontColor;
+            strong {
+                color: $strongFontColor;
+            }
+        }
+
+        .ticket-circle {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            background-color: $background;
+            border: 1px solid $circleBorderColor;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: -30px;
+            left: 40%;
+
+            .ticket-circle-inner {
+                border-radius: 50%;
+                width: 25px;
+                height: 25px;
+                background-color: $innerCircleColor;
+            }
+        }
+
+        .ticket-title {
+            width: 100%;
+            height: 2.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $strongFontColor;
+            font-size: $bigFontSize;
+
+        }
+
+        .circle {
+            border: 1px solid $circleBorderColor;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $ticketBackgroundColor;
+
+            .price {
+                p {
+                    font-size: 2*$bigFontSize;
+                }
+                span {
+                    vertical-align: super;
+                    font-size: 50%;
+                }
+
+                p:last-child {
+                    font-size: $normalFontSize;
+                }
+            }
+        }
+
+        .button-wrapper {
+            height: 2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+.option-color-dark-grey {
+    background-color: $darkGrey;
+    text-align: center;
+    height: 2.5em;
+}
+
+.option-color-light-grey {
+    background-color: $circleColor;
+    text-align: center;
+    height: 2.5em;
+}
+
+.option-color-grey {
+    background-color: $greyColor;
+    text-align: center;
+    height: 2.5em;
+}
+
+.option-empty {
+    height: 2.5em;
+}

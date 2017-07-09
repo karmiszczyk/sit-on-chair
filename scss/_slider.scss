@@ -1,0 +1,51 @@
+@import 'variables';
+
+.slider-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.slider {
+    ul {
+        list-style: none;
+
+        li {
+            display: none;
+            height: 330px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .visible {
+        display: inline-block;
+    }
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    i {
+        border: solid $detailsColor;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 1em;
+        cursor: pointer;
+    }
+}
+
+@each $direction, $angle in $arrow-rotations {
+    .arrow-#{$direction}{
+        transform: rotate($angle);
+    }
+}
+
+.move-from-top {
+    margin-top: 50px;
+}
